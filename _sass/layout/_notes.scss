@@ -127,6 +127,46 @@
   }
 }
 
+/* --- Inline table of contents -------------------------------------------
+   `{% include toc %}` renders <aside class="sidebar__right">, which the theme
+   floats to the right *inside* the text column.  Floats are only avoided by
+   line boxes, so block level elements -- tables, `pre` code blocks, and the
+   .note-box boxes above -- are simply painted underneath the TOC and the text
+   looks covered.
+
+   Wrapping the include in <div class="toc-inline"> turns the TOC into an
+   ordinary full width block at the top of the page.  `float: none` does not
+   depend on the viewport width or on the grid arithmetic, so it cannot
+   overlap anything on any screen size.
+
+   Scoped by the .toc-inline ancestor, so other pages using {% include toc %}
+   (terms, markdown) keep the original floated layout.                        */
+.toc-inline {
+  margin: 0 0 2em 0;
+
+  .sidebar__right {
+    float: none;
+    width: auto;
+    position: static;
+    margin: 0;
+    z-index: auto;
+  }
+
+  .toc {
+    padding: 0.8em 1em;
+  }
+
+  /* column-width instead of a media query: 1 column when narrow, 2+ when wide */
+  .toc__menu {
+    column-width: 17em;
+    column-gap: 2em;
+
+    li {
+      break-inside: avoid;
+    }
+  }
+}
+
 /* --- Colour utility classes --- */
 .text-red    { color: #dc2626; }
 .text-cyan   { color: #0891b2; }

@@ -9,7 +9,7 @@ excerpt: "CMS 模拟与重建笔记：gridpack 产生、Pythia8 强子化、Priv
 author_profile: true
 ---
 
-*Kaixin Fan &nbsp;|&nbsp; 2026年3月4日*
+<p><em>Facxing &nbsp;|&nbsp; 2026年3月4日</em></p>
 
 ## Lxplus 服务器目录
 
@@ -566,14 +566,14 @@ process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
 1. Signal Process: $$p p \rightarrow W^-H(ZH)\rightarrow l^-\bar{\nu}(l^+l^-)\gamma\gamma+c.c.$$
 
 <figure>
-  <img src="/assets/images/notes/FeynmanDiag/WH_associated.pdf" alt="WH associated production Feynman diagram" style="max-width:60%;">
+  <img src="/assets/images/notes/FeynmanDiag/WH_associated.png" alt="WH associated production Feynman diagram" style="max-width:60%;">
 </figure>
 
 2. triboson: (major bkg)
    - $$p p \rightarrow W(Z)\gamma\gamma \rightarrow l\nu(l\bar{l})\gamma\gamma$$ (<span class="text-cyan">**JHEP 10 (2021), 174**</span>)
 
 <figure>
-  <img src="/assets/images/notes/FeynmanDiag/diboson/WGG.pdf" alt="Wgg Feynman diagram" style="max-width:80%;">
+  <img src="/assets/images/notes/FeynmanDiag/diboson/WGG.png" alt="Wgg Feynman diagram" style="max-width:80%;">
 </figure>
 
 3. Top association
@@ -714,39 +714,39 @@ Where $$w_{i}$$ denotes for genweight.
 ### Comparation to Higgs RUN III XSEC measurement
 
 <figure>
-  <img src="/assets/images/notes/plot_test_withoutleptonsel/mass_plot.pdf" alt="Mass plot without lepton selection" style="max-width:48%;">
+  <img src="/assets/images/notes/plot_test_withoutleptonsel/mass_plot.png" alt="Mass plot without lepton selection" style="max-width:48%;">
   <img src="/assets/images/notes/HXSEC_2023.png" alt="H→γγ cross section measurement 2023" style="max-width:48%;">
 </figure>
 
 ### Comparation to Low mass Higgs
 
 <figure>
-  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/lead_pt-over-mass_plot.pdf" alt="Lead pt/mass" style="max-width:32%;">
-  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/sublead_pt-over-mass_plot.pdf" alt="Sublead pt/mass" style="max-width:32%;">
-  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/mass_plot.pdf" alt="Mass plot" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/lead_pt-over-mass_plot.png" alt="Lead pt/mass" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/sublead_pt-over-mass_plot.png" alt="Sublead pt/mass" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/mass_plot.png" alt="Mass plot" style="max-width:32%;">
 </figure>
 
 <figure>
-  <img src="/assets/images/notes/lowmass_MGGnPTOM.pdf" alt="Low mass Mgg vs pT/m" style="max-width:80%;">
+  <img src="/assets/images/notes/lowmass_MGGnPTOM.png" alt="Low mass Mgg vs pT/m" style="max-width:80%;">
 </figure>
 
 <figure>
-  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/PTJ0_plot.pdf" alt="Leading jet pT" style="max-width:48%;">
-  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/n_jets_plot.pdf" alt="Number of jets" style="max-width:48%;">
+  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/PTJ0_plot.png" alt="Leading jet pT" style="max-width:48%;">
+  <img src="/assets/images/notes/plot_lowmass/plot_lowmass/n_jets_plot.png" alt="Number of jets" style="max-width:48%;">
 </figure>
 
 ### Main Plot
 
 <figure>
-  <img src="/assets/images/notes/plot_test/plot_test/mass_plot.pdf" alt="Mass plot" style="max-width:32%;">
-  <img src="/assets/images/notes/plot_test/plot_test/lead_pt-over-mass_plot.pdf" alt="Lead pt/mass" style="max-width:32%;">
-  <img src="/assets/images/notes/plot_test/plot_test/sublead_pt-over-mass_plot.pdf" alt="Sublead pt/mass" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_test/plot_test/mass_plot.png" alt="Mass plot" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_test/plot_test/lead_pt-over-mass_plot.png" alt="Lead pt/mass" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_test/plot_test/sublead_pt-over-mass_plot.png" alt="Sublead pt/mass" style="max-width:32%;">
 </figure>
 
 <figure>
-  <img src="/assets/images/notes/plot_test/plot_test/leadSelElePt_plot.pdf" alt="Leading selected electron pT" style="max-width:32%;">
-  <img src="/assets/images/notes/plot_test/plot_test/n_jets_plot.pdf" alt="Number of jets" style="max-width:32%;">
-  <img src="/assets/images/notes/plot_test/plot_test/PTJ0_plot.pdf" alt="Leading jet pT" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_test/plot_test/leadSelElePt_plot.png" alt="Leading selected electron pT" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_test/plot_test/n_jets_plot.png" alt="Number of jets" style="max-width:32%;">
+  <img src="/assets/images/notes/plot_test/plot_test/PTJ0_plot.png" alt="Leading jet pT" style="max-width:32%;">
 </figure>
 
 ### To do list
@@ -871,30 +871,30 @@ cmsDriver.py Configuration/GenProduction/python/WH012j_WtoLNu_HtoGG_PolP_5f_LO_M
 参考 [https://github.com/nhaubrich/DJR_plotting](https://github.com/nhaubrich/DJR_plotting) 给出的绘制 DJR 的方法 (使用 RECO level 的 root 文件)，修改后得到对 GEN level 的输出文件的绘图脚本，绘制的 DJR 图如下:
 
 <figure>
-  <img src="/assets/images/notes/DJR_plot/0p05GeV/WH_PolP_djr0.pdf" alt="DJR plot Longitudinal polarization 0→1" style="max-width:45%;">
-  <img src="/assets/images/notes/DJR_plot/0p05GeV/WH_PolP_djr1.pdf" alt="DJR plot Longitudinal polarization 1→2" style="max-width:45%;">
+  <img src="/assets/images/notes/DJR_plot/0p05GeV/WH_PolP_djr0.png" alt="DJR plot Longitudinal polarization 0→1" style="max-width:45%;">
+  <img src="/assets/images/notes/DJR_plot/0p05GeV/WH_PolP_djr1.png" alt="DJR plot Longitudinal polarization 1→2" style="max-width:45%;">
   <figcaption>DJR plot: Longitudinal polarization</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/images/notes/DJR_plot/0p05GeV/WH_PolT_djr0.pdf" alt="DJR plot Transverse polarization 0→1" style="max-width:45%;">
-  <img src="/assets/images/notes/DJR_plot/0p05GeV/WH_PolT_djr1.pdf" alt="DJR plot Transverse polarization 1→2" style="max-width:45%;">
+  <img src="/assets/images/notes/DJR_plot/0p05GeV/WH_PolT_djr0.png" alt="DJR plot Transverse polarization 0→1" style="max-width:45%;">
+  <img src="/assets/images/notes/DJR_plot/0p05GeV/WH_PolT_djr1.png" alt="DJR plot Transverse polarization 1→2" style="max-width:45%;">
   <figcaption>DJR plot: Transverse polarization</figcaption>
 </figure>
 
 切换不同的 qCUT 参数 (30, 60, 90) 对比:
 
 <figure>
-  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_djr0.pdf" alt="DJR PolP qcut30 djr0" style="max-width:32%;">
-  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_qcut60_djr0.pdf" alt="DJR PolP qcut60 djr0" style="max-width:32%;">
-  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_qcut90_djr0.pdf" alt="DJR PolP qcut90 djr0" style="max-width:32%;">
+  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_djr0.png" alt="DJR PolP qcut30 djr0" style="max-width:32%;">
+  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_qcut60_djr0.png" alt="DJR PolP qcut60 djr0" style="max-width:32%;">
+  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_qcut90_djr0.png" alt="DJR PolP qcut90 djr0" style="max-width:32%;">
   <figcaption>DJR plot: Longitudinal polarization 0→1</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_djr1.pdf" alt="DJR PolP qcut30 djr1" style="max-width:32%;">
-  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_qcut60_djr1.pdf" alt="DJR PolP qcut60 djr1" style="max-width:32%;">
-  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_qcut90_djr1.pdf" alt="DJR PolP qcut90 djr1" style="max-width:32%;">
+  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_djr1.png" alt="DJR PolP qcut30 djr1" style="max-width:32%;">
+  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_qcut60_djr1.png" alt="DJR PolP qcut60 djr1" style="max-width:32%;">
+  <img src="/assets/images/notes/DJR_plot/0p02GeV/WH_PolP_qcut90_djr1.png" alt="DJR PolP qcut90 djr1" style="max-width:32%;">
   <figcaption>DJR plot: Longitudinal polarization 1→2</figcaption>
 </figure>
 
