@@ -196,14 +196,25 @@
     clear: right;
     width: 25%;
     margin: 0 -26.5% 1em 0;
+
+    /* Sticky goes on the FLOAT, not on the box inside it.  The float's
+       containing block is .page__content, which spans the whole article, so
+       there is a real scroll range to stick over.  Putting sticky on the
+       inner .sidebar__right would do nothing: its parent is only as tall as
+       the TOC itself, so the sticky constraint rectangle has zero height. */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3em;
   }
 
   .toc-inline .sidebar__right {
     float: none;
     width: auto;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 3em;
+    position: static;
+    margin: 0;
+
+    /* the TOC can be longer than the viewport: let it scroll on its own
+       instead of running off the bottom of the screen */
     max-height: calc(100vh - 5em);
     overflow-y: auto;
   }
