@@ -13,4 +13,8 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+<!-- The stylesheet URL carries a build-time stamp so that a CSS change is
+     picked up immediately: without it the browser keeps using its cached
+     copy (GitHub Pages serves assets with cache-control: max-age=600) and
+     visitors see stale layout for several minutes. -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
