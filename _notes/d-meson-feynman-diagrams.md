@@ -49,7 +49,7 @@ W-box:       (ūγ^μP_L d)(d̄γ_μP_L c) × (ℓ̄γ^νP_Lν)(ν̄γ_νP_Lℓ)
 ```
 
 W 顶点：`W-ℓ-ν: (g/√2)γ^μP_L`，`W-u-d: (g/√2)V_ud γ^μP_L`。
-`V_ud` 就是图中 `d_m` 三代求和的权重，也是 `λ_d, λ_s, λ_b` 的来源。
+每个 `d_m` 代带 `V_cd V_ud*`（s、b 代同理），三代求和给出 `λ_d, λ_s, λ_b`。
 
 ### 1.3 强子矩阵元
 
@@ -77,9 +77,9 @@ W 顶点：`W-ℓ-ν: (g/√2)γ^μP_L`，`W-u-d: (g/√2)V_ud γ^μP_L`。
 |---|---|---|
 | `γ/Z` 从 `d_m` 或 `W`（N11–N22） | `C₇, C₉, C₁₀` | 非局域 `D→Pγ*` 振幅（ρ/ω/φ + 连续谱） |
 | Goldstone/W 交换（N3, N7, N11–N14, N19–N22） | 电弱匹配（与 W 纵向部分合并），**不进 C₃–C₆** | 软部 → 强子矩阵元/波函数 |
-| 盒图（N23–N26） | `C₉, C₁₀`（轻子盒） | 若含轻夸克，软部进非局域振幅 |
+| W-box（N23–N26，含轻子环） | `C₉, C₁₀` | 若含轻夸克，软部进非局域振幅 |
 | 自能（N27–N42） | 场强/波函数重整化 | 介子波函数 |
-| `H/G⁰`（N1–N10, N27–N29, N35–N38） | `H` 企鹅（~`m_d/m_W`，可忽略） | `G⁰` 是规范自由度，与 `W` 纵向抵消 |
+| `H/G⁰`（N1–N10, N27–N29, N35–N38） | `H` 企鹅（~`m_d/m_W`，可忽略） | `G⁰` 是规范自由度，与 `Z` 纵向抵消 |
 
 > 注：图中 `G` 是**带电 Goldstone**（W 的纵向分量），`G⁰` 是中性 Goldstone；
 > 胶子应标为小写 `g`。本组 42 张图**没有胶子线**。
@@ -93,9 +93,9 @@ W 顶点：`W-ℓ-ν: (g/√2)γ^μP_L`，`W-u-d: (g/√2)V_ud γ^μP_L`。
 | ![N11](/assets/images/notes/D2PieeFeynman/N11.png) | ![N11](/assets/images/notes/D2PieeFeynman/N11.png) | ![N1](/assets/images/notes/D2PieeFeynman/N1.png) |
 | N11：`γ` 从 `d_m`，硬部 → `C₇/C₉` | 同一图的软部 → `A(q²)` | N1：`H`，~`m_d/m_W` |
 | ![N12](/assets/images/notes/D2PieeFeynman/N12.png) | ![N3](/assets/images/notes/D2PieeFeynman/N3.png) | ![N2](/assets/images/notes/D2PieeFeynman/N2.png) |
-| N12：`Z` 从 `d_m` → `C₉/C₁₀` | N3：Goldstone/W 交换，软部 → 强子矩阵元 | N2：`G⁰`，与 `W` 纵向抵消 |
+| N12：`Z` 从 `d_m` → `C₉/C₁₀` | N3：Goldstone/W 交换，软部 → 强子矩阵元 | N2：`G⁰`，与 `Z` 纵向抵消 |
 | ![N23](/assets/images/notes/D2PieeFeynman/N23.png) | ![N30](/assets/images/notes/D2PieeFeynman/N30.png) | |
-| N23：盒图 → `C₉/C₁₀` | N30：自能 → 波函数重整化 | |
+| N23：W-box → `C₉/C₁₀` | N30：自能 → 波函数重整化 | |
 
 读图提示：`d_m` 是内部下型夸克（d/s/b 求和）；`γ/Z` 从 `d_m` 或 `W`
 发出。硬部（loop momentum ~`m_W`）进 `C_i`，软部（~`Λ_QCD`）进
@@ -107,7 +107,7 @@ W 顶点：`W-ℓ-ν: (g/√2)γ^μP_L`，`W-u-d: (g/√2)V_ud γ^μP_L`。
 |---|---|---|
 | N1–N10 | 规范/可忽略 | `H/G⁰`，不进 O₁–O₁₀ |
 | N11–N22 | **混合**：硬 SD + 软 LD | `γ/Z` 企鹅；硬部→`C₇/C₉/C₁₀`，软部→LD 振幅 |
-| N23–N26 | **SD**（轻子盒） | 硬部→`C₉/C₁₀`；若为夸克盒需另判 |
+| N23–N26 | **SD**（W-box，含轻子环） | 硬部→`C₉/C₁₀`；夸克 W-box 另补 |
 | N27–N42 | 重整化/波函数 | 不独立分类 |
 
 **与文献的对应**
@@ -124,25 +124,17 @@ W 顶点：`W-ℓ-ν: (g/√2)γ^μP_L`，`W-u-d: (g/√2)V_ud γ^μP_L`。
 
 ## 2. 按算符分组的图
 
-### O₁, O₂（树图；圈图只作 QCD 修正/混合）
+### O₁, O₂（树图；本组图不含 QCD 修正）
 
-O₁,₂ 本身是**树图**四夸克算符，不在这 42 张 1-loop 图里。下面只放
-**Goldstone/W 交换**图作为电弱修正的代表；它们**不是** QCD 修正，不能代表 O₃–O₆。
-
-| | | |
-|---|---|---|
-| ![N3](/assets/images/notes/D2PieeFeynman/N3.png) | ![N7](/assets/images/notes/D2PieeFeynman/N7.png) | ![N11](/assets/images/notes/D2PieeFeynman/N11.png) |
-| N3：Goldstone/W 交换 + H | N7：Goldstone/W 交换 + G⁰ | N11：Goldstone + γ 从 d_m |
+O₁,₂ 本身是**树图**四夸克算符，不在这 42 张 1-loop 图里。本组图**没有胶子线**，
+所以 O₁,₂ 的 QCD 修正/混合图**缺失**；Goldstone/W 交换图见 §1.4 的“代表图”，
+不要把它们当成 O₁,₂ 的 QCD 修正。
 
 ### O₃–O₆（QCD 企鹅）
 
 N11–N14, N19–N22 中的 `G` 是**带电 Goldstone**，不是胶子；本组图里
-**没有** QCD 胶子交换/胶子企鹅（O₃–O₆），见第 4 节。
-
-| | | |
-|---|---|---|
-| ![N11](/assets/images/notes/D2PieeFeynman/N11.png) | ![N12](/assets/images/notes/D2PieeFeynman/N12.png) | ![N19](/assets/images/notes/D2PieeFeynman/N19.png) |
-| N11：g + γ | N12：g + Z | N19：g + γ（W 线） |
+**没有** QCD 胶子交换/胶子企鹅，因此 **O₃–O₆ 的图全部缺失**，见第 4 节。
+不要用 N11/N12/N19 代替它们。
 
 ### O₇（磁偶极）
 
@@ -155,30 +147,30 @@ N11–N14, N19–N22 中的 `G` 是**带电 Goldstone**，不是胶子；本组�
 | ![N11](/assets/images/notes/D2PieeFeynman/N11.png) | ![N13](/assets/images/notes/D2PieeFeynman/N13.png) | ![N15](/assets/images/notes/D2PieeFeynman/N15.png) |
 | N11：γ 从 d_m | N13：γ 从 d_m | N15：γ 从 W |
 | ![N17](/assets/images/notes/D2PieeFeynman/N17.png) | ![N19](/assets/images/notes/D2PieeFeynman/N19.png) | ![N21](/assets/images/notes/D2PieeFeynman/N21.png) |
-| N17：γ 从 W | N19：γ 从 W + g | N21：γ 从 W + W |
+| N17：γ 从 W | N19：γ 从 W + G | N21：γ 从 W + W |
 
 ### O₉（矢量）
 
-`γ/Z` 企鹅（N11–N22）+ 盒图（N23–N26）+ 自能（N30–N33, N39–N42）。
+`γ/Z` 企鹅（N11–N22）+ W-box（N23–N26，含轻子环）+ 自能（N30–N34, N39–N42）。
 
 | | | |
 |---|---|---|
 | ![N11](/assets/images/notes/D2PieeFeynman/N11.png) | ![N12](/assets/images/notes/D2PieeFeynman/N12.png) | ![N15](/assets/images/notes/D2PieeFeynman/N15.png) |
 | N11：γ 从 d_m | N12：Z 从 d_m | N15：γ 从 W |
 | ![N16](/assets/images/notes/D2PieeFeynman/N16.png) | ![N23](/assets/images/notes/D2PieeFeynman/N23.png) | ![N30](/assets/images/notes/D2PieeFeynman/N30.png) |
-| N16：Z 从 W | N23：盒图 | N30：c 腿自能 + γ |
+| N16：Z 从 W | N23：W-box | N30：c 腿自能 + γ |
 
 ### O₁₀（轴矢）
 
 `Z` 从内部 `d_m` 或 `W` 发出：N12, N14, N16, N18, N20, N22；
-盒图 N23–N26；自能 N31, N33, N40, N42。
+W-box N23–N26；自能 N31, N32, N34, N40, N42。
 
 | | | |
 |---|---|---|
 | ![N12](/assets/images/notes/D2PieeFeynman/N12.png) | ![N14](/assets/images/notes/D2PieeFeynman/N14.png) | ![N16](/assets/images/notes/D2PieeFeynman/N16.png) |
-| N12：Z 从 d_m | N14：Z 从 d_m + g | N16：Z 从 W |
+| N12：Z 从 d_m | N14：Z 从 d_m + G | N16：Z 从 W |
 | ![N24](/assets/images/notes/D2PieeFeynman/N24.png) | ![N31](/assets/images/notes/D2PieeFeynman/N31.png) | ![N40](/assets/images/notes/D2PieeFeynman/N40.png) |
-| N24：盒图 | N31：c 腿自能 + Z | N40：u 腿自能 + Z |
+| N24：W-box | N31：c 腿自能 + Z | N40：u 腿自能 + Z |
 
 ### O₈（色磁偶极）
 
@@ -189,7 +181,7 @@ N11–N14, N19–N22 中的 `G` 是**带电 Goldstone**，不是胶子；本组�
 
 ## 3. H/G⁰ 图（不属于 O₁–O₁₀）
 
-`G⁰` 是规范自由度，与 `W` 纵向部分抵消；`H` 是 Higgs 企鹅，压低
+`G⁰` 是规范自由度，与 `Z` 纵向部分抵消；`G±` 与 `W` 纵向抵消；`H` 是 Higgs 企鹅，压低
 ~`m_d/m_W`。这些图只作规范检验，不计入算符系数。
 
 | | | |
@@ -199,7 +191,7 @@ N11–N14, N19–N22 中的 `G` 是**带电 Goldstone**，不是胶子；本组�
 | ![N5](/assets/images/notes/D2PieeFeynman/N5.png) | ![N28](/assets/images/notes/D2PieeFeynman/N28.png) | ![N37](/assets/images/notes/D2PieeFeynman/N37.png) |
 | N5：G⁰ + W | N28：c 腿自能 + H | N37：u 腿自能 + H |
 
-其余 H/G⁰ 图：N8, N9, N10, N27, N29, N35, N36, N38。
+其余 H/G⁰ 图：N3, N6, N7, N8, N9, N10, N27, N29, N35, N36, N38。
 
 ---
 
@@ -209,7 +201,7 @@ N11–N14, N19–N22 中的 `G` 是**带电 Goldstone**，不是胶子；本组�
 |---|---|---|
 | **抵消项** | 1-loop 振幅 UV 发散 | 打开 FeynArts `CounterTerms` |
 | **QCD 顶点修正**（胶子连外腿或 W） | O₁,₂ → O₇–O₁₀ 的混合与跑动 | 补胶子-外腿、胶子-W 顶点 |
-| **夸克 W-box** | O₉/O₁₀ 的 box 匹配、GIM | 确认 N23–N26 是轻子盒还是夸克盒 |
+| **夸克 W-box** | O₉/O₁₀ 的 box 匹配、GIM | N23–N26 是含轻子环的 W-box；夸克 W-box 仍缺 |
 | **γ–Z / W–γ 混合** | 中性玻色子 off-shell | 加混合自能 |
 | **胶子企鹅（O₃–O₆）** | QCD 企鹅系数 | 补胶子从内部夸克发出再吸收 |
 | **色磁偶极（O₈）** | 通过混合影响 O₇/O₉ | 补胶子螺旋翻转图 |
@@ -225,7 +217,7 @@ N11–N14, N19–N22 中的 `G` 是**带电 Goldstone**，不是胶子；本组�
 4. RGE 从 `m_W` 跑到 `m_c`（de Boer–Müller–Seidel NNLL）；
 5. 与 JHEP/Fajfer 在 `µ~m_c` 的系数对比。
 
-**规范检验**：改变 `ξ`，`G⁰` 与 `W` 纵向部分应抵消，`C_i` 与 `ξ` 无关。
+**规范检验**：改变 `ξ`，`G⁰` 与 `Z`、`G±` 与 `W` 纵向部分应抵消，`C_i` 与 `ξ` 无关。
 
 ---
 
