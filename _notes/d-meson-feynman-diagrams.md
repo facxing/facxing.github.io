@@ -10,7 +10,6 @@ author_profile: true
 ---
 
 **图源**：FeynArts/FeynCalc 生成，42 张（`T1C1N1 … T4C2N42`），下图为切片。
-**切片**：`/assets/images/notes/D2PieeFeynman/N1.png … N42.png`（3×3 网格切分）
 
 > 图与算符是**多对多**关系：一张图可同时贡献 O₇/O₉/O₁₀，一个算符也由多张图
 > 相加。下面按“主要贡献”分组；精确系数需对 1-loop 振幅做投影。
@@ -77,10 +76,13 @@ W 顶点：`W-ℓ-ν: (g/√2)γ^μP_L`，`W-u-d: (g/√2)V_ud γ^μP_L`。
 | 拓扑 | 硬部 → SD | 软部 → LD |
 |---|---|---|
 | `γ/Z` 从 `d_m` 或 `W`（N11–N22） | `C₇, C₉, C₁₀` | 非局域 `D→Pγ*` 振幅（ρ/ω/φ + 连续谱） |
-| 胶子交换（N3, N7, N11–N14, N19–N22） | `C₃–C₆`、O₁,₂ 的 QCD 混合 | 软胶子 → 强子矩阵元/波函数 |
+| Goldstone/W 交换（N3, N7, N11–N14, N19–N22） | 电弱匹配（与 W 纵向部分合并），**不进 C₃–C₆** | 软部 → 强子矩阵元/波函数 |
 | 盒图（N23–N26） | `C₉, C₁₀`（轻子盒） | 若含轻夸克，软部进非局域振幅 |
 | 自能（N27–N42） | 场强/波函数重整化 | 介子波函数 |
 | `H/G⁰`（N1–N10, N27–N29, N35–N38） | `H` 企鹅（~`m_d/m_W`，可忽略） | `G⁰` 是规范自由度，与 `W` 纵向抵消 |
+
+> 注：图中 `G` 是**带电 Goldstone**（W 的纵向分量），`G⁰` 是中性 Goldstone；
+> 胶子应标为小写 `g`。本组 42 张图**没有胶子线**。
 
 **代表图**
 
@@ -91,7 +93,7 @@ W 顶点：`W-ℓ-ν: (g/√2)γ^μP_L`，`W-u-d: (g/√2)V_ud γ^μP_L`。
 | ![N11](/assets/images/notes/D2PieeFeynman/N11.png) | ![N11](/assets/images/notes/D2PieeFeynman/N11.png) | ![N1](/assets/images/notes/D2PieeFeynman/N1.png) |
 | N11：`γ` 从 `d_m`，硬部 → `C₇/C₉` | 同一图的软部 → `A(q²)` | N1：`H`，~`m_d/m_W` |
 | ![N12](/assets/images/notes/D2PieeFeynman/N12.png) | ![N3](/assets/images/notes/D2PieeFeynman/N3.png) | ![N2](/assets/images/notes/D2PieeFeynman/N2.png) |
-| N12：`Z` 从 `d_m` → `C₉/C₁₀` | N3：胶子交换，软胶子 → 强子矩阵元 | N2：`G⁰`，与 `W` 纵向抵消 |
+| N12：`Z` 从 `d_m` → `C₉/C₁₀` | N3：Goldstone/W 交换，软部 → 强子矩阵元 | N2：`G⁰`，与 `W` 纵向抵消 |
 | ![N23](/assets/images/notes/D2PieeFeynman/N23.png) | ![N30](/assets/images/notes/D2PieeFeynman/N30.png) | |
 | N23：盒图 → `C₉/C₁₀` | N30：自能 → 波函数重整化 | |
 
@@ -125,17 +127,17 @@ W 顶点：`W-ℓ-ν: (g/√2)γ^μP_L`，`W-u-d: (g/√2)V_ud γ^μP_L`。
 ### O₁, O₂（树图；圈图只作 QCD 修正/混合）
 
 O₁,₂ 本身是**树图**四夸克算符，不在这 42 张 1-loop 图里。下面只放
-**胶子交换**图作为 QCD 修正的代表；它们同时贡献 O₃–O₆ 与 O₇–O₁₀ 的混合。
+**Goldstone/W 交换**图作为电弱修正的代表；它们**不是** QCD 修正，不能代表 O₃–O₆。
 
 | | | |
 |---|---|---|
 | ![N3](/assets/images/notes/D2PieeFeynman/N3.png) | ![N7](/assets/images/notes/D2PieeFeynman/N7.png) | ![N11](/assets/images/notes/D2PieeFeynman/N11.png) |
-| N3：胶子交换 + H | N7：胶子交换 + G⁰ | N11：胶子 + γ 从 d_m |
+| N3：Goldstone/W 交换 + H | N7：Goldstone/W 交换 + G⁰ | N11：Goldstone + γ 从 d_m |
 
 ### O₃–O₆（QCD 企鹅）
 
-胶子交换 + `γ/Z` 发射的图：N11–N14, N19–N22。真正的**胶子企鹅**
-（胶子从内部夸克发出再吸收）图中不完整，见第 4 节。
+N11–N14, N19–N22 中的 `G` 是**带电 Goldstone**，不是胶子；本组图里
+**没有** QCD 胶子交换/胶子企鹅（O₃–O₆），见第 4 节。
 
 | | | |
 |---|---|---|
