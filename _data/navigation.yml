@@ -29,7 +29,7 @@ main:
   # - title: "CV"
   #   url: /cv-json/
 
-  - title: "CMS Notes"
+  - title: "Notes"
     url: /notes/
     
   - title: "Guide"
